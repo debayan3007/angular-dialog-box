@@ -2,6 +2,12 @@
 	font-family: Arial;
 }
 
+#home {
+	width: 140px;
+	height: 60px;
+	cursor: pointer;
+}
+
 button, input {
 	outline: none;
 	border: none;

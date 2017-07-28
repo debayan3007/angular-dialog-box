@@ -7,11 +7,11 @@
 </head>
 <body ng-app="dialogBox">
 
-	<div id="home" data-role="page">
-		<button onclick="document.getElementById('dialogAuto').style.display='inline'">Send mails</button>
+	<div>
+		<button id="home" onclick="document.getElementById('dialogAuto').style.display='inline'">Send mails</button>
 	</div>
 
-	<div ng-controller="MainController" class="dialogbox" id="dialogAuto" data-role="page" data-dialog="true">
+	<div ng-controller="MainController" class="dialogbox" id="dialogAuto">
 		<button id="close" ng-click="dialogHide()">
 			<img src="img/close.png">
 		</button>
