@@ -1,0 +1,187 @@
+* {
+	font-family: Arial;
+}
+
+button, input {
+	outline: none;
+	border: none;
+}
+
+label {
+	color: #444444;
+	font: 30px;
+}
+
+#close {
+	background: #fafafa;
+	border: none;
+	float: right;
+	cursor: pointer;
+	margin-right: -8px;
+	margin-top: -2px;
+}
+
+#close img {
+	width: 14px;
+	height: 14px;
+}
+
+.dialogbox {
+	display: none;
+	width: 400px;
+	position: fixed;
+	bottom: 40%;
+	right: 50%;
+	border: 1px solid #cecbcb;
+	box-shadow: 0.5px 0.5px 5px #888888;
+	padding: 10px;
+	background: #fafafa;
+	border-radius: 0px;
+}
+
+.dialogbox .title label {
+	font-size: 160%;
+	color: #00A2E0;
+	font-weight: none;
+}
+
+#container {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.checkbox {
+	width: 18px;
+	height: 18px;
+	background-color: #ddd;
+	position: relative;
+	float: left;
+}
+
+ /*style="float: left;margin-left:7px;font-size:90%"*/
+
+#checkbox-label {
+	float: left;
+	margin-left: 7px;
+	font-size: 90%;
+}
+
+.checkbox input[type="checkbox"] {
+	visibility: hidden;
+}
+
+.checkbox label {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	background-color: white;
+	cursor: pointer;
+}
+
+.checkbox label:before {
+	content: '';
+	width: 9px;
+	height: 5.5px;
+	border: 1.5px solid #fff;
+	position: absolute;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+	top: 3px;
+	left: 3px;
+	opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked + label:before {
+	opacity: 1;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+	background-color: #00A2E0;
+}
+
+.select-auto label {
+	font-weight: none;
+	font-size: 110%;
+}
+
+.custom-select {
+	background-color: #d6d6d6;
+}
+
+.select-auto #selectTeam label {
+	hint: 'Select Team';
+}
+
+.custom-select {
+	height: 35px;
+	margin-top: 8px;
+}
+
+.select-auto .dropdown-button {
+	background: #d6d6d6;
+	border: none;
+	float: right;
+	width: 10%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.select-auto .dropdown-button img {
+	width: 20px;
+}
+
+.select-auto .custom-select:hover .dropdown-content {
+	
+}
+
+.select-auto .custom-select input[type="text"] {
+	display: inline;
+	margin: 0;
+	width: 90%;
+	height: 90%;
+	background-color: #d6d6d6;
+	font-family: sans-serif;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border: none;
+	border-radius: none;
+}
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    width: 90%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.finish-buttons {
+	float: right;
+	margin-left: 15px;
+	height: 35px;
+	width: 90px;
+	border: none;
+	background-color: #d6d6d6;
+	font-size: 90%;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#submit {
+    color: white;
+	background-color: #00A2E0;
+}

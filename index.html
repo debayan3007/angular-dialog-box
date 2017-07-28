@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	<title></title>
+</head>
+<body ng-app="dialogBox">
+
+	<div id="home" data-role="page">
+		<button onclick="document.getElementById('dialogAuto').style.display='inline'">Send mails</button>
+	</div>
+
+	<div ng-controller="MainController" class="dialogbox" id="dialogAuto" data-role="page" data-dialog="true">
+		<button id="close" ng-click="dialogHide()">
+			<img src="img/close.png">
+		</button>
+		<div id="container">
+			<div class="title">
+				<label>Select an Employee</label>
+			</div>
+			<br>
+			<div>
+				<div class="checkbox">
+					<input type="checkbox" id="send">
+					<label for="send"></label>
+				</div>
+				<label id="checkbox-label">Send welcome email to employee</label>
+			</div>
+			<br>
+			<br>
+			<div class="select-auto" id="selectTeam">
+				<label>Select a team in the organisation</label>
+				<div class="custom-select">
+					<input id="textTeam" ng-model="valueTeam" ng-change="onTeamChange()" type="text" placeholder="Select Team...">
+					<button class="dropdown-button" ng-click="onTeamExpand()">
+						<img src="img/dropdown.png">
+					</button>
+					<div class="dropdown-content" id="dropdown-team">
+						<ul ng-repeat="dept in teams track by $index">
+							<a ng-click="onTeamSelect($index)">{{dept}}</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="select-auto" id="selectEmployee">
+				<label>Select a team in the organisation</label>
+				<div class="custom-select">
+					<input id="textEmployee" ng-model="valueEmployee" ng-change="onEmployeeChange()" type="text" name="empployeeName" placeholder="Select Employee...">
+					<button class="dropdown-button" ng-click="onEmployeeExpand()">
+						<img src="img/dropdown.png">
+					</button>
+					<div class="dropdown-content" id="dropdown-employee">
+						<ul ng-repeat="employee in employees track by $index">
+							<a ng-click="onEmployeeSelect($index)">{{employee}}</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="buttons-container">
+				<button id="submit" class="finish-buttons" ng-click="dialogSubmit()">OK</button>
+				<button id="cancel" class="finish-buttons" ng-click="dialogHide()">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+    <!-- Modules -->
+	<script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+</body>
+</html>
