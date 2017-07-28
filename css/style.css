@@ -139,10 +139,6 @@ label {
 	width: 20px;
 }
 
-.select-auto .custom-select:hover .dropdown-content {
-	
-}
-
 .select-auto .custom-select input[type="text"] {
 	display: inline;
 	margin: 0;
@@ -173,6 +169,10 @@ label {
     text-decoration: none;
     display: block;
     cursor: pointer;
+}
+
+.dropdown-content a:hover {
+	background-color: #f0f0f0;
 }
 
 .finish-buttons {
